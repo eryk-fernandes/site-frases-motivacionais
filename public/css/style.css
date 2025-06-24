@@ -48,7 +48,7 @@ header > div > a {
     margin-right: 1em;
 }
 
-.signup {
+.botao-header {
     color: rgb(0, 0, 0);
     text-decoration: none;
     background-color: white;
@@ -57,20 +57,21 @@ header > div > a {
 }
 
 main {
-    flex: 1;
     display: flex;
     margin: auto;
+    width: 100%;
+    height: 100%;
 }
 
 section {
+    width: 60%;
     border-style: solid;
     border-radius: 0%;
     background-color: white;
     display: flex;
     align-items: center;
-    width: 80%;
     margin: auto;
-    height: 60%;
+    height: 70%;
 }
 
 .login {
@@ -78,28 +79,47 @@ section {
     height: 100%;
     background-color: #CC001F;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
 }
 
 .login h2 {
     margin-top: 2em;
-    margin-bottom: 0;
+    margin-bottom: 1em;
 }
 
-.login form {
-    margin: auto;
-    margin-top: 2em;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.login input {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 40%;
 }
 
-.login label {
+.signup {
     width: 80%;
-    margin: auto;
+    height: 100%;
+    background-color: #CC001F;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.signup input {
+    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+    width: 40%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+.login a:hover {
+    text-decoration: underline;
 }
 
 footer {

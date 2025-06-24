@@ -3,17 +3,14 @@
     $pageTitle = "Log in";
 
     include("partials/head.php");
+
+    $botaoLink = "signup.php";
+    $botaoNome = "Sign up";
+
+    include("partials/header.php");
     
 ?>
 
-<header>
-    <h1>MotivAção</h1>
-    <div>
-        <a href="sobre.php">Sobre</a>
-        <a href="https://github.com/eryk-fernandes/site-motivacao">Código do site</a>
-        <a class="signup" href="signup.php">Sign up</a>
-    </div>
-</header>
 <main>
     <section>
         <article>
@@ -28,6 +25,7 @@
                 <input type="password" name="password" placeholder="Digite sua senha"><br>
                 <input type="submit" name="log_in" value="Log In">
             </form>
+            <p>Não tem uma conta? <a href="signup.php">Criar conta!</a></p>
         </article>
     </section>
 </main>
