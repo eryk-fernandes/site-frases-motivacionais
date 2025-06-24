@@ -74,13 +74,17 @@ section {
     height: 70%;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
 .login {
     width: 80%;
     height: 100%;
     background-color: #CC001F;
     color: white;
     text-align: center;
-    font-size: 1.2em;
 }
 
 .login h2 {
@@ -94,13 +98,16 @@ section {
     width: 40%;
 }
 
+.login a:hover {
+    text-decoration: underline;
+}
+
 .signup {
     width: 80%;
     height: 100%;
     background-color: #CC001F;
     color: white;
     text-align: center;
-    font-size: 1.2em;
 }
 
 .signup input {
@@ -109,16 +116,7 @@ section {
     width: 40%;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
 .signup a:hover {
-    text-decoration: underline;
-}
-
-.login a:hover {
     text-decoration: underline;
 }
 
