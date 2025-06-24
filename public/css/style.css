@@ -1,0 +1,126 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #F4F2EE;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CC001F;
+    color: white;
+    width: 100%;
+    margin: 0;
+}
+
+header > h1 {
+    color: rgb(255, 255, 255);
+    margin-left: 1.5em;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+header div {
+    margin-right: 2em;
+    margin-left: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > div > a {
+    margin-right: 1em;
+}
+
+.signup {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: white;
+    padding: 0.5em;
+    border-radius: 10%;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    margin: auto;
+}
+
+section {
+    border-style: solid;
+    border-radius: 0%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    height: 60%;
+}
+
+.login {
+    width: 80%;
+    height: 100%;
+    background-color: #CC001F;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login h2 {
+    margin-top: 2em;
+    margin-bottom: 0;
+}
+
+.login form {
+    margin: auto;
+    margin-top: 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login label {
+    width: 80%;
+    margin: auto;
+}
+
+footer {
+    background-color: #CC001F;
+    color: white;
+    text-align: center;
+    height: 2em;
+}
+
+footer p {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    margin: auto;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: white;
+    text-decoration:none;
+}
+
+footer a:hover {
+    text-decoration:underline;
+}
