@@ -28,7 +28,7 @@
                 <input type="password" name="senha" placeholder="Digite sua senha"><br>
                 <input type="submit" name="log_in" value="Criar conta">
             </form>
-            <p>Já tem uma conta? <a href="signup.php">Entre!</a></p>
+            <p>Já tem uma conta? <a href="login.php">Entre!</a></p>
         </article>
     </section>
 </main>
