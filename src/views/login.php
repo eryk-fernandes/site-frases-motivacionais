@@ -1,9 +1,5 @@
 <?php
 
-    session_start();
-
-    include("../../lib/database.php");
-
     $tituloPagina = "Log in";
 
     include("partials/head.php");
@@ -16,7 +12,7 @@
 ?>
 
 <main>
-    <section>
+    <section class="login-signup-section">
         <article>
             <h2>Compartilhe frases motivacionais</h2>
         </article>
@@ -29,7 +25,6 @@
                 <input type="password" name="password" placeholder="Digite sua senha"><br>
                 <input type="submit" name="log_in" value="Log In">
             </form>
-
             <p>Não tem uma conta? <a href="signup.php">Criar conta!</a></p>
         </article>
     </section>
@@ -45,11 +40,10 @@
         foreach ($_POST as $campo) {
             if (empty($campo)) {
                 $campos_digitados = false;
-                include("../../public/js/mensagem_erro_form.js");
+                include("../../public/js/msg_erro_form.js");
                 break;
             }
         }
     }
 
-    mysqli_close($conn);
 ?>

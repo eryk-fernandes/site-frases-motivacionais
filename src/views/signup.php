@@ -1,9 +1,5 @@
 <?php
 
-    session_start();
-
-    include("../../lib/database.php");
-
     $tituloPagina = "Criar conta";
 
     include("partials/head.php");
@@ -15,7 +11,7 @@
 ?>
 
 <main>
-    <section>
+    <section class="login-signup-section">
         <article>
             <h2>Compartilhe frases motivacionais</h2>
         </article>
@@ -24,8 +20,6 @@
             <form action="signup.php" method="post">
                 <label>Nome</label><br>
                 <input type="text" name="nome" placeholder="Digite seu nome"><br>
-                <label>Data de nascimento</label><br>
-                <input type="date" name="dataNascimento"><br>
                 <label>Email</label><br>
                 <input type="email" name="email" placeholder="Digite seu email" ><br>
                 <label>Senha</label><br>
@@ -48,33 +42,23 @@
         foreach ($_POST as $campo) {
             if (empty($campo)) {
                 $campos_digitados = false;
-                include("../../public/js/mensagem_erro_form.js");
+                include("../../public/js/msg_erro_form.js");
                 break;
             }
         }
 
         if ($campos_digitados) {
 
-            $nome = filter_input(INPUT_POST, "nome", FILTER_SANITIZE_SPECIAL_CHARS);;
-            $senha = password_hash(filter_input(INPUT_POST, "senha", FILTER_SANITIZE_SPECIAL_CHARS), PASSWORD_DEFAULT);
-            $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-            $dataNascimento = filter_input(INPUT_POST, "dataNascimento", FILTER_SANITIZE_SPECIAL_CHARS);
+            $nome = $_POST["nome"];
+            $email = $_POST["email"];
+            $senha = $_POST["senha"];
 
-            $sql = "
-                INSERT INTO usuario (nome, dataNascimento, email, senha)
-                VALUES ('$nome','$dataNascimento','$email','$senha');
-            ";
+            include("../controllers/UsuarioController.php");
 
-            try {
-                mysqli_query($conn, $sql);
-                include("../../public/js/mensagem_conta_criada.js");
-            }
-            catch (mysqli_sql_exception) {
-                include("../../public/js/mensagem_erro_usuario.js");
-            }
+            $usuarioController = new UsuarioController();
+
+            $usuarioController -> registrarUsuario($nome, $email, $senha);
         }
 
     }
-
-    mysqli_close($conn);
 ?>
